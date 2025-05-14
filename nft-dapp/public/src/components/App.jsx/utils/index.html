@@ -3,25 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My NFT DApp</title>
+  <title>NFT DApp</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <header>
-    <h1>My NFT Project</h1>
-  </header>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200.png?text=NFT+Image" alt="NFT Preview" />
+    <div class="card-title">NFT #001</div>
+    <div class="card-price">Price: 0.05 ETH</div>
+    <div class="card-buttons">
+      <button class="eth-button">Buy with ETH</button>
+      <button class="token-button">Buy with Token</button>
+    </div>
+  </div>
 
-  <main>
-    <section id="mint-section">
-      <h2>Mint your NFT</h2>
-      <button id="mint-button">Mint NFT</button>
-    </section>
-  </main>
+  <button class="connect-button" style="position: absolute; top: 20px; right: 20px;">
+    Connect Wallet
+  </button>
 
-  <footer>
-    <p>&copy; 2025 My NFT Project</p>
-  </footer>
+  <script>
+    const connectButton = document.querySelector('.connect-button');
+    connectButton.addEventListener('click', () => {
+      alert('Connecting to wallet...');
+    });
 
-  <script src="app.js"></script>
+    const ethButton = document.querySelector('.eth-button');
+    ethButton.addEventListener('click', () => {
+      alert('Buying NFT with ETH...');
+    });
+
+    const tokenButton = document.querySelector('.token-button');
+    tokenButton.addEventListener('click', () => {
+      alert('Buying NFT with Token...');
+    });
+  </script>
 </body>
 </html>
