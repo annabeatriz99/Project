@@ -4,37 +4,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NFT DApp</title>
-  <link rel="stylesheet" href="index.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #121212;
+      color: white;
+    }
+
+    .connect-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ff6200;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .nft-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      width: 200px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 98, 0, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+    width: 100%;
+    height: 250px;       /* Mantém altura fixa */
+    object-fit: cover;   /* Centraliza e corta sem deformar */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+    .card-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .card-price {
+      color: #ff914d;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .card-buttons button {
+      background: #ff6200;
+      border: none;
+      padding: 8px 12px;
+      margin: 4px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 13px;
+      color: white;
+      width: 80px;
+    }
+
+    .card-buttons button:hover {
+      background: #e05500;
+    }
+  </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://via.placeholder.com/300x200.png?text=NFT+Image" alt="NFT Preview" />
-    <div class="card-title">NFT #001</div>
-    <div class="card-price">Price: 0.05 ETH</div>
-    <div class="card-buttons">
-      <button class="eth-button">Buy with ETH</button>
-      <button class="token-button">Buy with Token</button>
+  <button class="connect-button">Connect Wallet</button>
+
+  <div class="nft-grid">
+    <!-- NFT Cards -->
+    <div class="card">
+      <img src="c:\Users\ASTROSEIDO\Downloads\Consciouss_Konibo.png" alt="NFT #001" />
+      <div class="card-title">NFT #001</div>
+      <div class="card-price">0.05 ETH</div>
+      <div class="card-buttons">
+        <button class="eth-button">ETH</button>
+        <button class="token-button">Token</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="c:\Users\ASTROSEIDO\Downloads\Serpient_Cosmico.PNG" alt="NFT #002" />
+      <div class="card-title">NFT #002</div>
+      <div class="card-price">0.07 ETH</div>
+      <div class="card-buttons">
+        <button class="eth-button">ETH</button>
+        <button class="token-button">Token</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="c:\Users\ASTROSEIDO\Downloads\Kene_AI_Art_3.png" alt="NFT #003" />
+      <div class="card-title">NFT #003</div>
+      <div class="card-price">0.1 ETH</div>
+      <div class="card-buttons">
+        <button class="eth-button">ETH</button>
+        <button class="token-button">Token</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="c:\Users\ASTROSEIDO\Downloads\Kene_AI_Art_2.png" alt="NFT #004" />
+      <div class="card-title">NFT #004</div>
+      <div class="card-price">0.12 ETH</div>
+      <div class="card-buttons">
+        <button class="eth-button">ETH</button>
+        <button class="token-button">Token</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="c:\Users\ASTROSEIDO\Downloads\Olinda_Silvano.jpg" alt="NFT #005" />
+      <div class="card-title">NFT #005</div>
+      <div class="card-price">0.15 ETH</div>
+      <div class="card-buttons">
+        <button class="eth-button">ETH</button>
+        <button class="token-button">Token</button>
+      </div>
     </div>
   </div>
 
-  <button class="connect-button" style="position: absolute; top: 20px; right: 20px;">
-    Connect Wallet
-  </button>
-
   <script>
-    const connectButton = document.querySelector('.connect-button');
-    connectButton.addEventListener('click', () => {
+    document.querySelector('.connect-button').addEventListener('click', () => {
       alert('Connecting to wallet...');
     });
 
-    const ethButton = document.querySelector('.eth-button');
-    ethButton.addEventListener('click', () => {
-      alert('Buying NFT with ETH...');
+    document.querySelectorAll('.eth-button').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Buying NFT with ETH...');
+      });
     });
 
-    const tokenButton = document.querySelector('.token-button');
-    tokenButton.addEventListener('click', () => {
-      alert('Buying NFT with Token...');
+    document.querySelectorAll('.token-button').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Buying NFT with Token...');
+      });
     });
   </script>
 </body>

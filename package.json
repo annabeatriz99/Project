@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@openzeppelin/contracts": "^5.3.0",
-    "ethers": "^6.14.0",
+    "ethers": "^6.14.1",
     "nft.storage": "^7.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

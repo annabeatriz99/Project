@@ -1,83 +1,81 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #eee;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .connect-button {
-  background-color: #6c5ce7;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff6200;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   color: white;
 }
 
 .connect-button:hover {
-  background-color: #5a4bcf;
+  background: #e05500;
 }
 
 .card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #1f1f1f;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 98, 0, 0.6);
+  max-width: 320px;
+  width: 100%;
   padding: 20px;
-  width: 300px;
   text-align: center;
 }
 
 .card img {
-  width: 100%;
   border-radius: 12px;
-  margin-bottom: 12px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #ff6200;
 }
 
 .card-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 .card-price {
-  font-size: 16px;
-  margin-bottom: 16px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ff914d;
 }
 
-.card-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.eth-button {
-  background-color: #3498db;
+.card-buttons button {
+  background: #ff6200;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   color: white;
 }
 
-.eth-button:hover {
-  background-color: #2980b9;
+.card-buttons button:hover {
+  background: #e05500;
 }
-
-.token-button {
-  background-color: #2ecc71;
-  color: white;
-}
-
-.token-button:hover {
-  background-color: #27ae60;
-}
-
